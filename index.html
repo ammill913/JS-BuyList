@@ -2,15 +2,79 @@
 <html>
 <head lang="uk">
     <meta charset="UTF-8">
-    <title>My Page</title>
-
-
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy List - Домашнє 1</title>
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-	<span class="product-item">
-		Apple
-		<span class="amount">4</span>
-	</span>
+	<main class="container">
+		<section class="buy-list">
+			<div class="add-item-bar">
+				<input type="text" placeholder="Назва товару" class="item-input">
+				<button class="btn-add" data-tooltip="Додати товар">Додати</button>
+			</div>
+
+			<div class="items-container">
+				<div class="item-row">
+					<span class="item-name">Помідори</span>
+					<div class="item-controls">
+						<span class="item-count">2</span>
+					</div>
+					<div class="item-status">
+						<button class="btn-status not-bought" data-tooltip="Змінити статус">Не куплено</button>
+					</div>
+				</div>
+
+				<div class="item-row">
+					<span class="item-name">Печиво</span>
+					<div class="item-controls">
+						<button class="btn-circle btn-minus" data-tooltip="Зменшити кількість">-</button>
+						<span class="item-count">2</span>
+						<button class="btn-circle btn-plus" data-tooltip="Збільшити кількість">+</button>
+					</div>
+					<div class="item-status">
+                        <button class="btn-status bought" data-tooltip="Змінити статус">Куплено</button>
+                        <button class="btn-delete" data-tooltip="Видалити товар">✖</button>
+                    </div>
+				</div>
+
+				<div class="item-row">
+					<input type="text" value="Сир" class="edit-input">
+					<div class="item-controls">
+						<button class="btn-circle btn-minus disabled" data-tooltip="Не можна менше 1">−</button>
+                        <span class="item-count">1</span>
+                        <button class="btn-circle btn-plus" data-tooltip="Збільшити кількість">+</button>
+                    </div>
+                    <div class="item-status">
+                        <button class="btn-status bought" data-tooltip="Змінити статус">Куплено</button>
+                        <button class="btn-delete" data-tooltip="Видалити товар">✖</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<aside class="summary">
+			<div class="summary-card">
+				<h2>Залишилося</h2>
+				<div class="summary-tags">
+					<span class="tag">Печиво <span class="tag-count">2</span></span>
+					<span class="tag">Сир <span class="tag-count">1</span></span>
+				</div>
+			</div>
+
+			<div class="summary-card">
+				<h2>Куплено</h2>
+				<div class="summary-tags">
+                    <span class="tag strikethrough">Помідори <span class="tag-count">2</span></span>
+                </div>
+			</div>
+		</aside>
+	</main>
+
+	<div class="badge">
+        <span class="badge-title">Buy List</span>
+        <span class="badge-author">Created by:<br>Олександра</span>
+    </div>
+
 </body>
 </html>

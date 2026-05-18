@@ -24,19 +24,29 @@ button {
     margin: 0 auto;
 }
 
+.buy-list {
+    width: 100%;
+}
+
+.summary {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
 @media (min-width: 650px) {
     .container {
         flex-direction: row;
         align-items: flex-start;
     }
     .buy-list {
-        flex: 2; 
+        flex: 2;
+        width: auto;
     }
     .summary {
-        flex: 1; 
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
+        flex: 1;
+        width: auto;
     }
 }
 
@@ -116,16 +126,15 @@ button {
 }
 
 .btn-circle {
-    width: 32px;
     height: 32px;
+    width: 32px;
+    padding: 0;
     border-radius: 50%;
     border: none;
     color: white;
     font-weight: bold;
     font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-shrink: 0;
 }
 
 .btn-minus { background-color: #cf2c2c; }
@@ -289,7 +298,7 @@ button {
     font-weight: normal;
     white-space: nowrap;
     pointer-events: none;
-    
+
     transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     z-index: 20;
 }
